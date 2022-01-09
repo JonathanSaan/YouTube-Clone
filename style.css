@@ -1,0 +1,187 @@
+body {
+  background-color: white;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+div#menu {
+  display: block;
+  position: fixed;
+  width: 85px;
+  margin-top: -80px;
+  z-index: 1;
+}
+
+button#MenuHamburger img {
+  height: 30px;
+}
+
+div#menu button {
+  background: none;
+  border: none;
+  width: 80px;
+  margin-bottom: 30px;
+}
+
+div#menu img {
+  display: flex;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  height: 35px;
+  background-color: white;
+  margin-top: -100px;
+  margin-left: 85px;
+  padding-top: 20px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eeeeeeff;
+  z-index: 1;
+}
+
+header img#youtube {
+  margin-top: 3px;
+  height: 25px;
+}
+
+header img {
+  height: 25px;
+  margin-right: 40px;
+}
+
+header input {
+  width: 350px;
+  border: 1px solid lightgray;
+  margin-left: 10px;
+  padding-left: 15px;
+}
+
+header button#search {
+  width: 50px;
+  border: 1px solid lightgray;
+  background-color: #F8F8F8;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 40px;
+  margin-left: -3px;
+}
+
+header button#mic {
+  background-color: #F8F8F8;
+  border-radius: 60%;
+  padding-right: 30px;
+  margin-left: 20px;
+}
+
+header button.icons {
+  background: none;
+  border: none;
+  width: 25px;
+  margin-right: 25px;
+}
+
+header button#SignIn img {
+  border-radius: 60%;
+  margin-left: 5px;
+  margin-right: 15px;
+}
+
+header button#SignIn {
+  display: flex;
+  border: 1px solid #5b99e9;
+  border-radius: 3px;
+  color: #5b99e9;
+  width: 110px;
+  align-items: center;
+  text-transform: uppercase;
+  margin-left: 15px;
+}
+
+div#categorias {
+  display: flex;
+  position: fixed;
+  background-color: white;
+  border-bottom: 2px solid #eeeeeeff;
+  margin-top: -33px;
+  margin-left: 85px;
+  padding-top: 5px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  width: 91%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  z-index: 1;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+div#categorias button:nth-child(1) {
+  border: none;
+  color: white;
+  background-color: black;
+}
+
+div#categorias button {
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  white-space: nowrap;
+  padding: 10px;
+  margin-top: 4px;
+  margin-left: 15px;
+}
+
+div#videos {
+  width: 85%;
+  position: relative;
+  margin-top: 100px;
+  margin-left: 85px;
+  padding: 40px;
+  display: grid;
+  background-color: #F8F8F8;
+  grid-template-columns: repeat(4, 25%);
+  grid-gap: 20px 5px;
+  overflow-x: hidden;
+}
+
+.video {
+  min-height: 250px;
+  height: auto;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.content {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.channel-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.title {
+  width: 100%;
+  height: 35px;
+  overflow: hidden;
+}
+
+.channel-name {
+  font-size: 13px;
+  margin: 2px 0;
+  color: #979797;
+}
