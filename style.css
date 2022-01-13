@@ -1,9 +1,18 @@
 body {
   background-color: white;
   position: relative;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
 }
+
+div#navbar {
+  position: fixed;
+  margin-top: -85px;
+  margin-left: 25px;
+  z-index: 3;
+}
+
 
 div#menu {
   display: flex;
@@ -11,19 +20,19 @@ div#menu {
   flex-direction: column;
   background-color: white;
   width: 85px;
-  margin-top: -80px;
-  z-index: 1;
+  margin-top: -40px;
+  z-index: 4;
 }
 
-button#MenuHamburger img {
-  height: 30px;
-}
-
-div#menu button {
+div#menu button, div.sidebar button {
   background: none;
   border: none;
-  width: 80px;
-  margin-bottom: 30px;
+  height: 80px;
+  align-items: center;
+}
+
+div#menu button:hover, div.sidebar button:hover {
+  background-color: lightgray;
 }
 
 div#menu img {
@@ -31,23 +40,82 @@ div#menu img {
   margin: auto;
 }
 
+div#yt {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+button.MenuHamburger {
+  display: block;
+  background-color: white;
+  border: none;
+  padding-top: 4px;
+  padding-left: 8px;
+}
+
+button.MenuHamburger img {
+  height: 20px;
+  justify-content: center;
+}
+
+button.MenuHamburger:hover {
+  background-color: #eeeeeeff;
+  border-radius: 50%;
+}
+
+div.sidebar {
+  display: inline;
+  position: fixed;
+  background-color: white;
+  margin-top: -80px;
+  left: -100%;
+  transition: all .5 ease;
+  height: 100%;
+  width: 200px;
+  z-index: 5;
+}
+
+#check:checked ~ .sidebar{
+  left: 0;
+  transition: 350ms;
+}
+
+div.sidebar img {
+  margin-right: 20px;
+  height: 20px;
+}
+
+div.sidebar button {
+  display: flex;
+  padding-left: 20px;
+  height: 50px;
+  width: 200px;
+}
+
+hr {
+  margin: -.5px 0 -.5px 0;
+  border: 0.5px solid gray;
+}
+
+div#description {
+  width: 160px;
+  font-size: 13px;
+  margin-left: 25px;
+}
+
 header {
   display: flex;
   position: fixed;
   height: 35px;
   background-color: white;
-  margin-top: -100px;
+  margin-top: -110px;
   margin-left: 85px;
   padding-top: 20px;
   padding-right: 40px;
   padding-bottom: 10px;
   border-bottom: 2px solid #eeeeeeff;
-  z-index: 1;
-}
-
-header img#youtube {
-  margin-top: 3px;
-  height: 1.5em;
+  z-index: 2;
 }
 
 header img {
@@ -69,7 +137,7 @@ header button#search {
   text-align: center;
   padding-left: 20px;
   padding-right: 40px;
-  margin-left: -3px;
+  margin-left: -1px;
 }
 
 header button#mic {
@@ -87,13 +155,13 @@ header button.icons {
   margin-right: .5em;
 }
 
-header button#SignIn img {
+button.SignIn img {
   border-radius: 60%;
   margin-left: 5px;
   margin-right: 15px;
 }
 
-header button#SignIn {
+button.SignIn {
   display: flex;
   border: 1px solid #5b99e9;
   border-radius: 3px;
@@ -109,7 +177,7 @@ div#categorias {
   position: fixed;
   background-color: white;
   border-bottom: 2px solid #eeeeeeff;
-  margin-top: -33px;
+  margin-top: -43px;
   margin-left: 85px;
   padding-top: 5px;
   padding-right: 30px;
