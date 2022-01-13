@@ -9,23 +9,44 @@
   </script>
 </head>
 <body>
+  <div id="navbar">
+    <button class="MenuHamburger" id="show-menu" type="submit"><img src="img/menuhamburger.png" /></button>
+  </div>
   <div id="menu">
-    <button id="MenuHamburger" type="submit"><img src="img/menuhamburger.png" alt="" /></button>
-    <button type="submit"><img src="img/home.png" alt="" />Home</button>
-    <button type="submit"><img src="img/explore.png" alt="" />Explore</button>
-    <button type="submit"><img src="img/subscription.png" alt="" />Subscription</button>
-    <button type="submit"><img src="img/library.png" alt="" />Library</button>
-    <button type="submit"><img src="img/history.png" alt="" />History</button>
+    <button type="submit"><img src="img/home.png" />Home</button>
+    <button type="submit"><img src="img/explore.png" />Explore</button>
+    <button type="submit"><img src="img/subscription.png" />Subscription</button>
+    <button type="submit"><img src="img/library.png" />Library</button>
+    <button type="submit"><img src="img/history.png" />History</button>
+  </div>
+  <div class="sidebar">
+    <div id="yt">
+      <button class="MenuHamburger" id="hide-menu" type="submit"><img src="img/menuhamburger.png" /></button>
+      <img class="youtube" src="img/07.png" />
+    </div>
+    <button><img src="img/home.png" />Home</button>
+    <button><img src="img/explore.png" />Explore</button>
+    <button><img src="img/subscription.png" />Subscription</button>
+    <hr />
+    <button><img src="img/library.png" />Library</button>
+    <button><img src="img/history.png" />History</button>
+    <hr />
+    <div id="description">
+      <p>
+        Sign in to like videos, comment, and subscribe.
+      </p>
+      <button class="SignIn" type="submit"><img src="img/user.png" />Sign in</button>
+    </div>
   </div>
 
   <header>
-    <img id="youtube" src="img/07.png" alt="" />
+    <img class="youtube" src="img/07.png" />
     <input id="search-bar" type="search" placeholder="Search" />
-    <button id="search" type="submit"><img src="img/search.png" alt="" /></button>
-    <button class="icons" id="mic" type="submit"><img src="img/microfone.png" alt="" /></button>
-    <button class="icons" type="submit"><img src="img/apps.svg" alt="" /></button>
-    <button class="icons" type="submit"><img src="img/pontinhos.png" alt="" /></button>
-    <button id="SignIn" type="submit"><img src="img/user.png" alt="" />Sign in</button>
+    <button id="search" type="submit"><img src="img/search.png" /></button>
+    <button class="icons" id="mic" type="submit"><img src="img/microfone.png" /></button>
+    <button class="icons" type="submit"><img src="img/apps.svg" /></button>
+    <button class="icons" type="submit"><img src="img/pontinhos.png" /></button>
+    <button class="SignIn" type="submit"><img src="img/user.png" />Sign in</button>
   </header>
   <div id="categorias">
     <button type="submit">All</button>
