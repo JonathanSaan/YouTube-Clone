@@ -43,20 +43,29 @@ div#menu img {
 div#yt {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+div#yt button#hide-menu{
+  height: 30px;
+  width: 30px;
+  margin-left: -3px;
+  margin-right: 20px;
+}
+
+div#yt button#hide-menu img{
+  margin-left: -15px;
 }
 
 button.MenuHamburger {
   display: block;
   background-color: white;
   border: none;
-  padding-top: 4px;
-  padding-left: 8px;
 }
 
 button.MenuHamburger img {
   height: 20px;
-  justify-content: center;
 }
 
 button.MenuHamburger:hover {
@@ -65,20 +74,14 @@ button.MenuHamburger:hover {
 }
 
 div.sidebar {
-  display: inline;
   position: fixed;
   background-color: white;
-  margin-top: -80px;
+  margin-top: -95px;
   left: -100%;
-  transition: all .5 ease;
+  transition: all 300 ease;
   height: 100%;
   width: 200px;
   z-index: 5;
-}
-
-#check:checked ~ .sidebar{
-  left: 0;
-  transition: 350ms;
 }
 
 div.sidebar img {
