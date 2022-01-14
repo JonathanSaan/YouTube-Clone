@@ -3,6 +3,12 @@ let api_key = "AIzaSyD6VSqAOYip2ZlesDklHGpTFPKb6NPXWk4";
 let video_http = "https://www.googleapis.com/youtube/v3/videos?";
 let channel_http = "https://www.googleapis.com/youtube/v3/channels?";
 
+
+document.querySelector("#show-menu").addEventListener('click', function() {
+  document.querySelector('.sidebar').style.left = 0;
+});
+
+
 fetch(video_http + new URLSearchParams({
   key: api_key,
   part: 'snippet',
