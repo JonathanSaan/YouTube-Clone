@@ -13,7 +13,6 @@ div#navbar {
   z-index: 3;
 }
 
-
 div#menu {
   display: flex;
   position: fixed;
@@ -47,14 +46,14 @@ div#yt {
   margin-bottom: 10px;
 }
 
-div#yt button#hide-menu{
+div#yt button#hide-menu {
   height: 30px;
   width: 30px;
   margin-left: -3px;
   margin-right: 20px;
 }
 
-div#yt button#hide-menu img{
+div#yt button#hide-menu img {
   margin-left: -15px;
 }
 
@@ -76,12 +75,17 @@ button.MenuHamburger:hover {
 div.sidebar {
   position: fixed;
   background-color: white;
-  margin-top: -95px;
+  margin-top: -90px;
   left: -100%;
-  transition: all 300 ease;
+  transition: 850ms;
   height: 100%;
   width: 200px;
   z-index: 5;
+}
+
+div.sidebar.active {
+  left: 0;
+  transition: 350ms;
 }
 
 div.sidebar img {
@@ -98,13 +102,25 @@ div.sidebar button {
 
 hr {
   margin: -.5px 0 -.5px 0;
-  border: 0.5px solid gray;
+  border: 0.5px solid lightgray;
 }
 
-div#description {
+div#description p {
   width: 160px;
   font-size: 13px;
-  margin-left: 25px;
+  margin-left: 20px;
+}
+
+button#SignIn2 {
+  height: 32px;
+  width: 110px;
+  border: 1px solid #5b99e9;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+button#SignIn2 img {
+  margin-left: -5px;
 }
 
 header {
@@ -167,12 +183,17 @@ button.SignIn img {
 button.SignIn {
   display: flex;
   border: 1px solid #5b99e9;
+  background-color: white;
   border-radius: 3px;
   color: #5b99e9;
   width: 110px;
   align-items: center;
   text-transform: uppercase;
   margin-left: 15px;
+}
+
+button.SignIn:hover, button#SignIn2:hover {
+  background-color: lightblue;
 }
 
 div#categorias {
