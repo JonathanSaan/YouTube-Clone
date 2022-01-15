@@ -5,7 +5,11 @@ let channel_http = "https://www.googleapis.com/youtube/v3/channels?";
 
 
 document.querySelector("#show-menu").addEventListener('click', function() {
-  document.querySelector('.sidebar').style.left = 0;
+  document.querySelector('.sidebar').classList.add('active');
+});
+
+document.querySelector("#hide-menu").addEventListener('click', function() {
+  document.querySelector('.sidebar').classList.remove('active');
 });
 
 
