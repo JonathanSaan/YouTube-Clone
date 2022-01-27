@@ -1,4 +1,4 @@
-body {
+dy {
   background-color: white;
   position: relative;
   font-family: sans-serif;
@@ -19,7 +19,7 @@ div#menu {
   flex-direction: column;
   background-color: white;
   width: 85px;
-  margin-top: -40px;
+  margin: -40px 0 0 0;
   z-index: 4;
 }
 
@@ -49,12 +49,11 @@ div#yt {
 div#yt button#hide-menu {
   height: 30px;
   width: 30px;
-  margin-left: -3px;
-  margin-right: 20px;
+  margin: 0 20px 0 -3px;
 }
 
 div#yt button#hide-menu img {
-  margin-left: -15px;
+  margin: 0 0 0 -15px;
 }
 
 button.MenuHamburger {
@@ -75,7 +74,7 @@ button.MenuHamburger:hover {
 div.sidebar {
   position: fixed;
   background-color: white;
-  margin-top: -90px;
+  margin: -90px 0 0 0;
   left: -100%;
   transition: 850ms;
   height: 100%;
@@ -89,13 +88,13 @@ div.sidebar.active {
 }
 
 div.sidebar img {
-  margin-right: 20px;
+  margin: 0 20px 0 0;
   height: 20px;
 }
 
 div.sidebar button {
   display: flex;
-  padding-left: 20px;
+  padding: 0 0 0 20px;
   height: 50px;
   width: 200px;
 }
@@ -105,22 +104,25 @@ hr {
   border: 0.5px solid lightgray;
 }
 
+div#description {
+  margin: 10px 0 10px 0;
+}
+
 div#description p {
   width: 160px;
   font-size: 13px;
-  margin-left: 20px;
+  margin: 0 0 10px 20px;
 }
 
 button#SignIn2 {
   height: 32px;
   width: 110px;
   border: 1px solid #5b99e9;
-  margin-left: 20px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 20px;
 }
 
 button#SignIn2 img {
-  margin-left: -5px;
+  margin: 0 5px 0 -5px;
 }
 
 header {
@@ -128,25 +130,23 @@ header {
   position: fixed;
   height: 35px;
   background-color: white;
-  margin-top: -110px;
-  margin-left: 85px;
-  padding-top: 20px;
-  padding-right: 40px;
-  padding-bottom: 10px;
+  margin: -110px 0 0 85px;
+  padding: 20px 40px 10px 0;
   border-bottom: 2px solid #eeeeeeff;
+  width: 100%;
   z-index: 2;
 }
 
 header img {
   height: 1.5em;
-  margin-right: 5%;
+  margin: 0 5% 0 0;
 }
 
 header input {
-  width: 45vw;
+  width: 40vw;
   border: 1px solid lightgray;
-  margin-left: 2em;
-  padding-left: 15px;
+  margin: 0 0 0 2em;
+  padding: 0 0 0 15px;
 }
 
 header button#search {
@@ -154,30 +154,27 @@ header button#search {
   border: 1px solid lightgray;
   background-color: #F8F8F8;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 40px;
-  margin-left: -1px;
+  margin: 0 0 0 -1px;
+  padding: 0 40px 0 20px;
 }
 
 header button#mic {
   background-color: #F8F8F8;
   border-radius: 60%;
-  padding-right: 30px;
-  margin-left: 1em;
+  margin: 0 0 0 1em;
+  padding: 0 30px 0 0;
 }
 
 header button.icons {
   background: none;
   border: none;
   width: 2vw;
-  margin-left: .5em;
-  margin-right: .5em;
+  margin: 0 .5em 0 .5em;
 }
 
 button.SignIn img {
   border-radius: 60%;
-  margin-left: 5px;
-  margin-right: 15px;
+  margin: 0 15px 0 5px;
 }
 
 button.SignIn {
@@ -189,7 +186,7 @@ button.SignIn {
   width: 110px;
   align-items: center;
   text-transform: uppercase;
-  margin-left: 15px;
+  margin: 0 0 0 15px;
 }
 
 button.SignIn:hover, button#SignIn2:hover {
@@ -201,12 +198,9 @@ div#categorias {
   position: fixed;
   background-color: white;
   border-bottom: 2px solid #eeeeeeff;
-  margin-top: -43px;
-  margin-left: 85px;
-  padding-top: 5px;
-  padding-right: 30px;
-  padding-bottom: 10px;
-  width: 91%;
+  margin: -43px 0 0 85px;
+  padding: 5px 30px 10px 0;
+  width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
   z-index: 1;
@@ -227,15 +221,13 @@ div#categorias button {
   border-radius: 20px;
   white-space: nowrap;
   padding: 10px;
-  margin-top: 4px;
-  margin-left: 15px;
+  margin: 4px 0 0 15px;
 }
 
 div#videos {
   width: 85%;
   position: relative;
-  margin-top: 100px;
-  margin-left: 85px;
+  margin: 100px 0 0 85px;
   padding: 40px;
   display: grid;
   background-color: #F8F8F8;
@@ -245,6 +237,7 @@ div#videos {
 }
 
 .video {
+  width: 100%;
   min-height: 250px;
   height: auto;
 }
@@ -282,4 +275,8 @@ div#videos {
   font-size: 13px;
   margin: -5px 0;
   color: #979797;
+}
+
+div#mobile {
+  display: none;
 }
