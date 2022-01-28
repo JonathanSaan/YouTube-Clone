@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="em">
 <head>
   <meta charset="UTF-8">
   <title>YouTube</title>
@@ -9,66 +9,98 @@
   </script>
 </head>
 <body>
-  <div id="navbar">
-    <button class="MenuHamburger" id="show-menu" type="submit"><img src="img/menuhamburger.png" /></button>
-  </div>
-  <div id="menu">
-    <button type="submit"><img src="img/home.png" />Home</button>
-    <button type="submit"><img src="img/explore.png" />Explore</button>
-    <button type="submit"><img src="img/subscription.png" />Subscription</button>
-    <button type="submit"><img src="img/library.png" />Library</button>
-    <button type="submit"><img src="img/history.png" />History</button>
-  </div>
-  <div class="sidebar">
-    <div id="yt">
-      <button class="MenuHamburger" id="hide-menu" type="submit"><img src="img/menuhamburger.png" /></button>
-      <img class="youtube" src="img/07.png" />
+  <div id="pc">
+    <div id="navbar">
+      <button class="MenuHamburger" id="show-menu" type="submit"><img src="img/menuhamburger.png" /></button>
     </div>
-    <button><img src="img/home.png" />Home</button>
-    <button><img src="img/explore.png" />Explore</button>
-    <button><img src="img/subscription.png" />Subscription</button>
-    <hr />
-    <button><img src="img/library.png" />Library</button>
-    <button><img src="img/history.png" />History</button>
-    <hr />
-    <div id="description">
-      <p>
-        Sign in to like videos, comment, and subscribe.
-      </p>
-      <button class="SignIn" id="SignIn2"type="submit"><img src="img/user.png" />Sign in</button>
+    <div id="menu">
+      <button type="submit"><img src="img/home.png" />Home</button>
+      <button type="submit"><img src="img/explore.png" />Explore</button>
+      <button type="submit"><img src="img/subscription.png" />Subscription</button>
+      <button type="submit"><img src="img/library.png" />Library</button>
+      <button type="submit"><img src="img/history.png" />History</button>
+    </div>
+    <div class="sidebar">
+      <div id="yt">
+        <button class="MenuHamburger" id="hide-menu" type="submit"><img src="img/menuhamburger.png" /></button>
+        <img class="youtube" src="img/07.png" />
+      </div>
+      <button><img src="img/home.png" />Home</button>
+      <button><img src="img/explore.png" />Explore</button>
+      <button><img src="img/subscription.png" />Subscription</button>
       <hr />
+      <button><img src="img/library.png" />Library</button>
+      <button><img src="img/history.png" />History</button>
+      <hr />
+      <div id="description">
+        <p>
+          Sign in to like videos, comment, and subscribe.
+        </p>
+        <button class="SignIn" id="SignIn2"type="submit"><img src="img/user.png" />Sign in</button>
+        <hr />
+      </div>
+    </div>
+
+    <header>
+      <img class="youtube" src="img/07.png" />
+      <input id="search-bar" type="search" placeholder="Search" />
+      <button id="search" type="submit"><img src="img/search.png" /></button>
+      <button class="icons" id="mic" type="submit"><img src="img/microfone.png" /></button>
+      <button class="icons" type="submit"><img src="img/apps.svg" /></button>
+      <button class="icons" type="submit"><img src="img/pontinhos.png" /></button>
+      <button class="SignIn" type="submit"><img src="img/user.png" />Sign in</button>
+    </header>
+    <div class="categorias">
+      <button type="submit">All</button>
+      <button type="submit">Baking</button>
+      <button type="submit">Laughter</button>
+      <button type="submit">Live</button>
+      <button type="submit">Music</button>
+      <button type="submit">Chill-out music</button>
+      <button type="submit">Nature</button>
+      <button type="submit">Superheroes </button>
+      <button type="submit">Gaming</button>
+      <button type="submit">Cakes</button>
+      <button type="submit">Dubbing</button>
+      <button type="submit">Comedies</button>
+      <button type="submit">Spider-Man </button>
+      <button type="submit">Wood</button>
+      <button type="submit">History</button>
+      <button type="submit">Street food</button>
+    </div>
+    <div id="videos">
+
     </div>
   </div>
-
-  <header>
-    <img class="youtube" src="img/07.png" />
-    <input id="search-bar" type="search" placeholder="Search" />
-    <button id="search" type="submit"><img src="img/search.png" /></button>
-    <button class="icons" id="mic" type="submit"><img src="img/microfone.png" /></button>
-    <button class="icons" type="submit"><img src="img/apps.svg" /></button>
-    <button class="icons" type="submit"><img src="img/pontinhos.png" /></button>
-    <button class="SignIn" type="submit"><img src="img/user.png" />Sign in</button>
-  </header>
-  <div id="categorias">
-    <button type="submit">All</button>
-    <button type="submit">Baking</button>
-    <button type="submit">Laughter</button>
-    <button type="submit">Live</button>
-    <button type="submit">Music</button>
-    <button type="submit">Chill-out music</button>
-    <button type="submit">Nature</button>
-    <button type="submit">Superheroes </button>
-    <button type="submit">Gaming</button>
-    <button type="submit">Cakes</button>
-    <button type="submit">Dubbing</button>
-    <button type="submit">Comedies</button>
-    <button type="submit">Spider-Man </button>
-    <button type="submit">Wood</button>
-    <button type="submit">History</button>
-    <button type="submit">Street food</button>
-  </div>
-  <div id="videos">
-
+  <div id="mobile">
+    <div id="header">
+      <img class="youtube" src="img/07.png" />
+      <button class="search" type="submit"><img src="img/search.png" /></button>
+      <button type="submit"><img src="img/user-mobile.png" /></button>
+    </div>
+    <div class="categorias">
+      <button type="submit">All</button>
+      <button type="submit">Baking</button>
+      <button type="submit">Laughter</button>
+      <button type="submit">Live</button>
+      <button type="submit">Music</button>
+      <button type="submit">Chill-out music</button>
+      <button type="submit">Nature</button>
+      <button type="submit">Superheroes </button>
+      <button type="submit">Gaming</button>
+      <button type="submit">Cakes</button>
+      <button type="submit">Dubbing</button>
+      <button type="submit">Comedies</button>
+      <button type="submit">Spider-Man </button>
+      <button type="submit">Wood</button>
+      <button type="submit">History</button>
+      <button type="submit">Street food</button>
+    </div>
+    <div id="bottom-navigation">
+      <button class="botao" type="submit"><img src="img/home.png" />Home</button>
+      <button class="botao" type="submit"><img src="img/explore.png" />Explore</button>
+      <button class="botao" type="submit"><img src="img/library.png" />Library</button>
+    </div>
   </div>
 </body>
 </html>
