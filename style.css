@@ -296,7 +296,7 @@ div#videos {
     align-items: center;
     padding: 5px;
     height: 40px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid lightgray;
   }
   div#header img.youtube {
     height: 25px;
@@ -310,6 +310,14 @@ div#videos {
   }
   div#header button img {
     height: 20px;
+  }
+  div.categorias {
+    margin: 0px;
+    border-bottom: .3px solid lightgray;
+  }
+  div#videos {
+    width: 77%;
+    margin: 0px;
   }
   div#bottom-navigation {
     display: flex;
@@ -330,8 +338,5 @@ div#videos {
     white-space: nowrap;
     background-color: white;
     border: none;
-  }
-  div.categorias {
-    margin: 0px;
   }
 }
