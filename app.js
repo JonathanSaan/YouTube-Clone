@@ -1,4 +1,5 @@
-const videoCardContainer = document.querySelector('#videos');
+const videoCardContainerPC = document.querySelector('#videosPC');
+const videoCardContainerMobile = document.querySelector('#videosMobile');
 let api_key = "AIzaSyD6VSqAOYip2ZlesDklHGpTFPKb6NPXWk4";
 let video_http = "https://www.googleapis.com/youtube/v3/videos?";
 let channel_http = "https://www.googleapis.com/youtube/v3/channels?";
@@ -42,7 +43,20 @@ const getChannelIcon = (video_data) => {
 }
 
 const makeVideoCard = (data) => {
-  videoCardContainer.innerHTML += `
+  
+  videoCardContainerPC.innerHTML += `
+  <div class="video" onclick="location.href = 'https://youtube.com/watch?v=${data.id}'">
+  <img src="${data.snippet.thumbnails.high.url}" class="thumbnail" alt="">
+  <div class="content">
+  <img src="${data.channelThumbnail}" class="channel-icon" alt="">
+  <div class="info">
+  <h4 class="title">${data.snippet.title}</h4>
+  <p class="channel-name">${data.snippet.channelTitle}</p>
+  </div>
+  </div>
+  </div>
+  `;
+  videoCardContainerMobile.innerHTML += `
   <div class="video" onclick="location.href = 'https://youtube.com/watch?v=${data.id}'">
   <img src="${data.snippet.thumbnails.high.url}" class="thumbnail" alt="">
   <div class="content">
