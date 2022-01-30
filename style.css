@@ -289,10 +289,14 @@ div#videosPC {
   }
   div#header {
     display: flex;
+    position: fixed;
     align-items: center;
+    background-color: #fffffff8;
     justify-content: space-between;
     padding: 5px;
     height: 40px;
+    margin: -105px 0;
+    width: 100%;
     border-bottom: 1px solid lightgray;
   }
   div#header img.youtube {
@@ -308,13 +312,13 @@ div#videosPC {
     height: 20px;
   }
   div.categorias {
-    position: relative;
     padding: 5px 0px 5px 0px;
-    margin: 0px;
+    margin: -54px 0px;
     border-bottom: .3px solid lightgray;
   }
   .video {
     height: 280px;
+    margin: 105px 0 -100px 0;
   }
   .thumbnail {
     min-height: 200px;
