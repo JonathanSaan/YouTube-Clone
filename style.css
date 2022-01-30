@@ -225,7 +225,7 @@ div.categorias button {
   margin: 4px 0 0 15px;
 }
 
-div#videos {
+div#videosPC {
   position: relative;
   margin: 100px 0 0 85px;
   padding: 40px;
@@ -273,7 +273,7 @@ div#videos {
 
 .channel-name {
   font-size: 13px;
-  margin: -5px 0;
+  margin: 2px 0;
   color: #979797;
 }
 
@@ -308,16 +308,25 @@ div#videos {
     height: 20px;
   }
   div.categorias {
+    position: relative;
+    padding: 5px 0px 5px 0px;
     margin: 0px;
     border-bottom: .3px solid lightgray;
   }
-  div#videos {
-    margin: 0px;
+  .video {
+    height: 280px;
+  }
+  .thumbnail {
+    min-height: 200px;
+  }
+  .content {
+    padding: 0px;
   }
   div#bottom-navigation {
     display: flex;
     position: fixed;
     justify-content: space-between;
+    border-top: .3px solid lightgray;
     height: 60px;
     width: 100%;
     bottom: 0;
