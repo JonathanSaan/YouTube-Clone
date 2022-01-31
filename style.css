@@ -129,7 +129,7 @@ header {
   display: flex;
   position: fixed;
   height: 35px;
-  background-color: white;
+  background-color: #fffffff8;
   margin: -110px 0 0 85px;
   padding: 20px 40px 10px 0;
   border-bottom: 2px solid #eeeeeeff;
@@ -197,7 +197,7 @@ button.SignIn:hover, button#SignIn2:hover {
 div.categorias {
   display: flex;
   position: fixed;
-  background-color: white;
+  background-color: #fffffff8;
   border-bottom: 2px solid #eeeeeeff;
   margin: -43px 0 0 85px;
   padding: 5px 30px 10px 0;
@@ -298,6 +298,7 @@ div#videosPC {
     margin: -105px 0;
     width: 100%;
     border-bottom: 1px solid lightgray;
+    transition: .4s;
   }
   div#header img.youtube {
     height: 25px;
@@ -314,7 +315,9 @@ div#videosPC {
   div.categorias {
     padding: 5px 0px 5px 0px;
     margin: -54px 0px;
+    background-color: white;
     border-bottom: .3px solid lightgray;
+    transition: .5s;
   }
   .video {
     height: 280px;
