@@ -13,6 +13,21 @@ document.querySelector("#hide-menu").addEventListener('click', function() {
   document.querySelector('.sidebar').classList.remove('active');
 });
 
+var lastScrollTop = 0;
+header = document.querySelector("#header");
+categorias = document.querySelector("#categoriasMobile");
+window.addEventListener("scroll", function(){
+  var scrollTop = window.pageYOffset || document.documentElement.scroll;
+  if (scrollTop > lastScrollTop) {
+    header.style.top = "-80px";
+    categorias.style.top = "-80px";
+  }
+  else{
+    header.style.top = "105px";
+    categorias.style.top = "105px";
+  }
+  lastScrollTop = scrollTop
+});
 
 fetch(video_http + new URLSearchParams({
   key: api_key,
