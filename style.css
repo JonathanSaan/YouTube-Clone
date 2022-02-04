@@ -1,10 +1,78 @@
 body {
   box-sizing: border-box;
-  position: relative;
   background-color: white;
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  height: 35px;
+  background-color: #fffffff8;
+  margin: -20px 0 0 70px;
+  padding: 20px 40px 10px 0;
+  border-bottom: 2px solid #eeeeeeff;
+  width: 100%;
+  z-index: 1;
+}
+
+header img {
+  height: 1.5em;
+  margin: 0 3% 0 0;
+}
+
+header input {
+  width: 40vw;
+  border: 1px solid lightgray;
+  margin: 0 0 0 2em;
+  padding: 0 0 0 15px;
+}
+
+header button.search {
+  width: 1vw;
+  border: 1px solid lightgray;
+  background-color: #F8F8F8;
+  text-align: center;
+  margin: 0 0 0 -1px;
+  padding: 0 40px 0 20px;
+}
+
+header button.icons {
+  background: none;
+  border: none;
+  width: 3vw;
+  margin: 0 1% 0 1%;
+}
+
+header button#mic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #F8F8F8;
+}
+
+button.SignIn img {
+  border-radius: 60%;
+  margin: 0 15px 0 5px;
+}
+
+button.SignIn {
+  display: flex;
+  border: 1px solid #5b99e9;
+  background-color: white;
+  border-radius: 3px;
+  color: #5b99e9;
+  width: 110px;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 0 0 0 15px;
+}
+
+button.SignIn:hover, button#SignIn2:hover {
+  background-color: lightblue;
 }
 
 div#navbar {
@@ -71,6 +139,37 @@ button.MenuHamburger:hover {
   border-radius: 50%;
 }
 
+div.categorias {
+  display: flex;
+  position: fixed;
+  background-color: #fffffff8;
+  border-bottom: 2px solid #eeeeeeff;
+  margin: -43px 0 0 70px;
+  padding: 10px 30px 10px 0;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  z-index: 1;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+div.categorias button:nth-child(1) {
+  border: none;
+  color: white;
+  background-color: black;
+}
+
+div.categorias button {
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  white-space: nowrap;
+  padding: 10px;
+  margin: 4px 0 0 15px;
+}
+
 div.sidebar {
   position: fixed;
   background-color: white;
@@ -123,106 +222,6 @@ button#SignIn2 {
 
 button#SignIn2 img {
   margin: 0 5px 0 -5px;
-}
-
-header {
-  display: flex;
-  position: fixed;
-  height: 35px;
-  background-color: #fffffff8;
-  margin: -110px 0 0 85px;
-  padding: 20px 40px 10px 0;
-  border-bottom: 2px solid #eeeeeeff;
-  width: 100%;
-  z-index: 2;
-}
-
-header img {
-  height: 1.5em;
-  margin: 0 5% 0 0;
-}
-
-header input {
-  width: 40vw;
-  border: 1px solid lightgray;
-  margin: 0 0 0 2em;
-  padding: 0 0 0 15px;
-}
-
-header button.search {
-  width: 1vw;
-  border: 1px solid lightgray;
-  background-color: #F8F8F8;
-  text-align: center;
-  margin: 0 0 0 -1px;
-  padding: 0 40px 0 20px;
-}
-
-header button.icons {
-  background: none;
-  border: none;
-  width: 3vw;
-  margin: 0 1% 0 1%;
-}
-
-header button#mic {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: #F8F8F8;
-}
-
-button.SignIn img {
-  border-radius: 60%;
-  margin: 0 15px 0 5px;
-}
-
-button.SignIn {
-  display: flex;
-  border: 1px solid #5b99e9;
-  background-color: white;
-  border-radius: 3px;
-  color: #5b99e9;
-  width: 110px;
-  align-items: center;
-  text-transform: uppercase;
-  margin: 0 0 0 15px;
-}
-
-button.SignIn:hover, button#SignIn2:hover {
-  background-color: lightblue;
-}
-
-div.categorias {
-  display: flex;
-  position: fixed;
-  background-color: #fffffff8;
-  border-bottom: 2px solid #eeeeeeff;
-  margin: -43px 0 0 85px;
-  padding: 5px 30px 10px 0;
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  z-index: 1;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-div.categorias button:nth-child(1) {
-  border: none;
-  color: white;
-  background-color: black;
-}
-
-div.categorias button {
-  border: 1px solid lightgray;
-  border-radius: 20px;
-  white-space: nowrap;
-  padding: 10px;
-  margin: 4px 0 0 15px;
 }
 
 div#videosPC {
@@ -284,6 +283,10 @@ div#videosPC {
 }
 
 @media(max-width: 900px) {
+  body {
+    margin-top: -50px;
+    overflow-x: hidden;
+  }
   div#pc {
     display: none;
   }
@@ -295,26 +298,60 @@ div#videosPC {
     justify-content: space-between;
     padding: 5px;
     height: 40px;
-    margin: -105px 0;
-    width: 100%;
+    margin: -55px 0;
+    width: 100vw;
     border-bottom: 1px solid lightgray;
     transition: .4s;
   }
   div#header img.youtube {
     height: 25px;
   }
-  div#header button {
+  div#header button, div#headertwo button {
     background: transparent;
     margin: 0 5px 0 0;
     border: none;
     height: 20px;
   }
-  div#header button img {
+  div#header button img, div#headertwo button, div#headertwo button img {
     height: 20px;
+  }
+  div#headertwo {
+    display: none;
+    height: 60px;
+  }
+  div#headertwo input {
+    background: transparent;
+    outline: none;
+    border: none;
+    height: 27px;
+    width: 67vw;
+    border-bottom: 1px solid gray;
+    color: gray;
+  }
+  div#headertwo.active {
+    display: flex;
+    background-color: white;
+    margin: -105px 0;
+    position: fixed;
+    align-items: center;
+    z-index: 5;
+  }
+  div#transparent {
+    display: none;
+  }
+  div#transparent.active {
+    display: block;
+    position: fixed;
+    background-color: #000000cf;
+    height: 100%;
+    width: 100vw;
+    padding: 100px 0;
+    z-index: 4;
   }
   div.categorias {
     padding: 5px 0px 5px 0px;
-    margin: -54px 0px;
+    margin: -4px 0px;
+    width: 100vw;
     background-color: white;
     border-bottom: .3px solid lightgray;
     transition: .5s;
@@ -335,7 +372,7 @@ div#videosPC {
     justify-content: space-between;
     border-top: .3px solid lightgray;
     height: 60px;
-    width: 100%;
+    width: 100vw;
     bottom: 0;
     overflow-x: auto;
   }
