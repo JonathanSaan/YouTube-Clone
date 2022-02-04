@@ -4,7 +4,12 @@ let api_key = "AIzaSyD6VSqAOYip2ZlesDklHGpTFPKb6NPXWk4";
 let video_http = "https://www.googleapis.com/youtube/v3/videos?";
 let channel_http = "https://www.googleapis.com/youtube/v3/channels?";
 
+let header = document.querySelector('#header');
+let categorias = document.querySelector("#categoriasMobile");
+let headertwo = document.querySelector('#headertwo');
+let escuro = document.querySelector('#transparent');
 
+//desktop
 document.querySelector("#show-menu").addEventListener('click', function() {
   document.querySelector('.sidebar').classList.add('active');
 });
@@ -13,18 +18,33 @@ document.querySelector("#hide-menu").addEventListener('click', function() {
   document.querySelector('.sidebar').classList.remove('active');
 });
 
+//mobile
+document.querySelector("#procurar").addEventListener('click', function() {
+  headertwo.classList.add('active');
+  escuro.classList.add('active');
+  header.style.display = "none";
+  headertwo.style.display = "flex";
+  categorias.style.display = "none";
+});
+
+document.querySelector("#voltar").addEventListener('click', function() {
+  headertwo.classList.remove('active');
+  escuro.classList.remove('active');
+  header.style.display = "flex";
+  headertwo.style.display = "none";
+  categorias.style.display = "flex";
+});
+
+//hide header
 var lastScrollTop = 0;
-header = document.querySelector("#header");
-categorias = document.querySelector("#categoriasMobile");
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function() {
   var scrollTop = window.pageYOffset || document.documentElement.scroll;
   if (scrollTop > lastScrollTop) {
     header.style.top = "-80px";
     categorias.style.top = "-80px";
-  }
-  else{
-    header.style.top = "105px";
-    categorias.style.top = "105px";
+  } else {
+    header.style.top = "55px";
+    categorias.style.top = "4px";
   }
   lastScrollTop = scrollTop
 });
@@ -58,7 +78,7 @@ const getChannelIcon = (video_data) => {
 }
 
 const makeVideoCard = (data) => {
-  
+
   videoCardContainerPC.innerHTML += `
   <div class="video" onclick="location.href = 'https://youtube.com/watch?v=${data.id}'">
   <img src="${data.snippet.thumbnails.high.url}" class="thumbnail" alt="">
@@ -87,8 +107,8 @@ const makeVideoCard = (data) => {
 
 // search bar
 
-const searchInput = document.querySelector('#search-bar');
-const searchBtn = document.querySelector('#search');
+const searchInput = document.querySelector('.search-bar');
+const searchBtn = document.querySelector('.search');
 let searchLink = "https://www.youtube.com/results?search_query=";
 
 searchBtn.addEventListener('click', () => {
