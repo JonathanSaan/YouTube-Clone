@@ -8,15 +8,20 @@ let html = document.querySelector('html');
 let header = document.querySelector('#header');
 let categorias = document.querySelector("#categoriasMobile");
 let headertwo = document.querySelector('#headertwo');
-let escuro = document.querySelector('#transparent');
+let escuro = document.querySelector('.transparent');
+let escuroMobile = document.querySelector('#transparentMobile');
 
 //desktop
 document.querySelector("#show-menu").addEventListener('click', function() {
   document.querySelector('.sidebar').classList.add('active');
+  html.style.overflowY = "hidden";
+  escuro.classList.add('active');
 });
 
 document.querySelector("#hide-menu").addEventListener('click', function() {
   document.querySelector('.sidebar').classList.remove('active');
+  html.style.overflowY = "scroll";
+  escuro.classList.remove('active');
 });
 
 //mobile
@@ -24,7 +29,7 @@ document.querySelector("#procurar").addEventListener('click', function() {
   html.style.overflowY = "hidden";
   header.style.display = "none";
   headertwo.classList.add('active');
-  escuro.classList.add('active');
+  escuroMobile.classList.add('active');
   headertwo.style.display = "flex";
   categorias.style.display = "none";
 });
@@ -33,7 +38,7 @@ document.querySelector("#voltar").addEventListener('click', function() {
   html.style.overflowY = "scroll";
   header.style.display = "flex";
   headertwo.classList.remove('active');
-  escuro.classList.remove('active');
+  escuroMobile.classList.remove('active');
   headertwo.style.display = "none";
   categorias.style.display = "flex";
 });
