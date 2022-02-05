@@ -146,7 +146,7 @@ div.categorias {
   border-bottom: 2px solid #eeeeeeff;
   margin: -43px 0 0 70px;
   padding: 10px 30px 10px 0;
-  width: 100%;
+  width: 100vw;
   overflow-x: auto;
   overflow-y: hidden;
   z-index: 1;
@@ -324,20 +324,18 @@ div#videosPC {
     outline: none;
     border: none;
     height: 27px;
-    width: 67vw;
+    width: 100%;
     border-bottom: 1px solid gray;
     color: gray;
   }
   div#headertwo.active {
     display: flex;
     background-color: white;
-    margin: -105px 0;
+    width: 100vw;
+    margin: -55px 0;
     position: fixed;
     align-items: center;
     z-index: 5;
-  }
-  div#transparent {
-    display: none;
   }
   div#transparent.active {
     display: block;
@@ -351,7 +349,6 @@ div#videosPC {
   div.categorias {
     padding: 5px 0px 5px 0px;
     margin: -4px 0px;
-    width: 100vw;
     background-color: white;
     border-bottom: .3px solid lightgray;
     transition: .5s;
@@ -374,7 +371,6 @@ div#videosPC {
     height: 60px;
     width: 100vw;
     bottom: 0;
-    overflow-x: auto;
   }
   div#bottom-navigation button.botao {
     display: flex;
