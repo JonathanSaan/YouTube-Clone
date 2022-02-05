@@ -149,7 +149,7 @@ div.categorias {
   width: 100vw;
   overflow-x: auto;
   overflow-y: hidden;
-  z-index: 1;
+  z-index: 2;
 }
 
 ::-webkit-scrollbar {
@@ -173,12 +173,13 @@ div.categorias button {
 div.sidebar {
   position: fixed;
   background-color: white;
-  margin: -90px 0 0 0;
+  margin: -100px 0;
+  padding: 10px 0;
   left: -100%;
   transition: 850ms;
   height: 100%;
   width: 200px;
-  z-index: 5;
+  z-index: 6;
 }
 
 div.sidebar.active {
@@ -222,6 +223,16 @@ button#SignIn2 {
 
 button#SignIn2 img {
   margin: 0 5px 0 -5px;
+}
+
+div.transparent.active {
+  display: block;
+  position: fixed;
+  background-color: #000000cf;
+  margin: -11% 0;
+  height: 120%;
+  width: 100%;
+  z-index: 5;
 }
 
 div#videosPC {
@@ -335,16 +346,7 @@ div#videosPC {
     margin: -55px 0;
     position: fixed;
     align-items: center;
-    z-index: 5;
-  }
-  div#transparent.active {
-    display: block;
-    position: fixed;
-    background-color: #000000cf;
-    height: 100%;
-    width: 100vw;
-    padding: 100px 0;
-    z-index: 4;
+    z-index: 7;
   }
   div.categorias {
     padding: 5px 0px 5px 0px;
@@ -371,6 +373,7 @@ div#videosPC {
     height: 60px;
     width: 100vw;
     bottom: 0;
+    z-index: 3;
   }
   div#bottom-navigation button.botao {
     display: flex;
