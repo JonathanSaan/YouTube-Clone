@@ -4,6 +4,7 @@ let api_key = "AIzaSyD6VSqAOYip2ZlesDklHGpTFPKb6NPXWk4";
 let video_http = "https://www.googleapis.com/youtube/v3/videos?";
 let channel_http = "https://www.googleapis.com/youtube/v3/channels?";
 
+let html = document.querySelector('html');
 let header = document.querySelector('#header');
 let categorias = document.querySelector("#categoriasMobile");
 let headertwo = document.querySelector('#headertwo');
@@ -20,17 +21,19 @@ document.querySelector("#hide-menu").addEventListener('click', function() {
 
 //mobile
 document.querySelector("#procurar").addEventListener('click', function() {
+  html.style.overflowY = "hidden";
+  header.style.display = "none";
   headertwo.classList.add('active');
   escuro.classList.add('active');
-  header.style.display = "none";
   headertwo.style.display = "flex";
   categorias.style.display = "none";
 });
 
 document.querySelector("#voltar").addEventListener('click', function() {
+  html.style.overflowY = "scroll";
+  header.style.display = "flex";
   headertwo.classList.remove('active');
   escuro.classList.remove('active');
-  header.style.display = "flex";
   headertwo.style.display = "none";
   categorias.style.display = "flex";
 });
@@ -44,7 +47,7 @@ window.addEventListener("scroll", function() {
     categorias.style.top = "-80px";
   } else {
     header.style.top = "55px";
-    categorias.style.top = "4px";
+    categorias.style.top = "55px";
   }
   lastScrollTop = scrollTop
 });
