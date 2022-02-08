@@ -295,7 +295,7 @@ div#videosPC {
 
 @media(max-width: 900px) {
   body {
-    margin-top: -50px;
+    margin-top: -20px;
     overflow-x: hidden;
   }
   div#pc {
@@ -309,7 +309,7 @@ div#videosPC {
     justify-content: space-between;
     padding: 5px;
     height: 40px;
-    margin: -55px 0;
+    margin: -85px 0;
     width: 100vw;
     border-bottom: 1px solid lightgray;
     transition: .4s;
@@ -343,14 +343,14 @@ div#videosPC {
     display: flex;
     background-color: white;
     width: 100vw;
-    margin: -55px 0;
+    margin: -91px 0;
     position: fixed;
     align-items: center;
     z-index: 7;
   }
   div.categorias {
     padding: 5px 0px 5px 0px;
-    margin: -4px 0px;
+    margin: -34px 0px;
     background-color: white;
     border-bottom: .3px solid lightgray;
     transition: .5s;
