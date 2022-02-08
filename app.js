@@ -27,20 +27,16 @@ document.querySelector("#hide-menu").addEventListener('click', function() {
 //mobile
 document.querySelector("#procurar").addEventListener('click', function() {
   html.style.overflowY = "hidden";
-  header.style.display = "none";
   headertwo.classList.add('active');
   escuroMobile.classList.add('active');
   headertwo.style.display = "flex";
-  categorias.style.display = "none";
 });
 
 document.querySelector("#voltar").addEventListener('click', function() {
   html.style.overflowY = "scroll";
-  header.style.display = "flex";
   headertwo.classList.remove('active');
   escuroMobile.classList.remove('active');
   headertwo.style.display = "none";
-  categorias.style.display = "flex";
 });
 
 //hide header
@@ -51,8 +47,8 @@ window.addEventListener("scroll", function() {
     header.style.top = "-80px";
     categorias.style.top = "-80px";
   } else {
-    header.style.top = "55px";
-    categorias.style.top = "55px";
+    header.style.top = "85px";
+    categorias.style.top = "85px";
   }
   lastScrollTop = scrollTop
 });
